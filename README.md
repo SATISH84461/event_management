@@ -29,7 +29,7 @@ The project is built using the following technologies:
 
 ## Installation
 
-- Install my-project with npm
+- Clone the repository:
 ```shell
   git clone https://github.com/SATISH84461/event_management.git
 ```
@@ -42,32 +42,38 @@ The project is built using the following technologies:
 ```shell
   python -m venv venv
 ```
-4. Activate the virtual environment
+- Activate the virtual environment
 ```shell
   .\venv\Scripts\activate
 ```
-5. Install the dependencies
+- Install the dependencies
 ```shell  
   pip install -r requirements.txt
 ```
-6. Run command to create new tables.
+- Run command to create new tables.
 ```shell
   python manage.py makemigrations
 ```
-8. Apply the database migrations
+- Apply the database migrations
 ```shell
   python manage.py migrate
 ```
-8. Create a superuser account
+- Create a superuser account
 ```shell
   python manage.py createsuperuser
 ```
-9. Start the development serve
+- Start the development serve
 ```shell
   python manage.py runserver  
 ```
-10. Access the application by visiting `http://localhost:8000` in your web browser.
-        
+- Access the application by visiting `http://localhost:8000` in your web browser.
+
+Note: The above instructions assume that you have Python and pip installed on your system. If not, make sure to install them before proceeding with the steps.
+
+For more details on deploying the application to a production environment or using a different database, please refer to the documentation or specific deployment guides.
+
+
+Please customize the instructions based on your project requirements, and provide any additional details or steps necessary for the successful installation of your Django application.
 
 ## Usage
 
