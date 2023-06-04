@@ -33,21 +33,44 @@ The project is built using the following technologies:
 - HTML/CSS: for frontend design and styling
 - JavaScript: for frontend interactivity (if applicable)
 
+
 ## Installation
 
-Install my-project with npm
-
+1. Install my-project with npm
 ```shell
   git clone https://github.com/SATISH84461/event_management.git
-  cd event_management
-  python3 -m venv venv
-  source venv/bin/activate
-  pip install -r requirements.txt
-  python manage.py migrate
-  python manage.py createsuperuser
-  python manage.py runserver
 ```
-    
+
+2. Navigate to the project directory
+```shell
+  cd event_management
+```
+3. Create a virtual environment
+```shell
+  python -m venv venv
+```
+4. Activate the virtual environment
+```shell
+  venv/bin/activate
+```
+5. Install the dependencies
+```shell  
+  pip install -r requirements.txt
+```
+6. Apply the database migrations
+```shell
+  python manage.py migrate
+```
+7. Create a superuser account
+```shell
+  python manage.py createsuperuser
+```
+8. Start the development serve
+```shell
+  python manage.py runserver  
+```
+10. Access the application by visiting `http://localhost:8000` in your web browser.
+        
 
 ## Usage
 
