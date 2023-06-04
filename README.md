@@ -16,15 +16,18 @@ Event Management is a web application built with Django that helps users organiz
 - Event creation
 - User can Register for upcoming events
 - User profile management
-
 ## Technologies
 
-The project is built using the following technologies:
+The Event Management application is built using the following technologies:
 
 - Django: a high-level Python web framework
-- PostgreSQL (or any other preferred database): for data storage
+- SQLite: a lightweight and file-based relational database (can be replaced with other databases like PostgreSQL, MySQL, etc.)
 - HTML/CSS: for frontend design and styling
 - JavaScript: for frontend interactivity (if applicable)
+- Bootstrap: a popular CSS framework for responsive and mobile-first design
+- Python: the programming language used for the backend development
+
+Please note that the technologies used in your specific project may vary. Feel free to customize this list to accurately reflect the technologies utilized in your Django web application.
 
 
 ## Installation
