@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Create Event
+{% endblock %}
+{% block body %}
+        <div class="row" style="margin: 3em;">
+            <div class="col-6 mt-5 mb-5">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa totam maxime in sequi provident quasi laborum eveniet incidunt accusantium autem ullam saepe aspernatur quidem, repudiandae magni commodi dignissimos! Reiciendis, eaque!
+                    Possimus earum cupiditate corrupti velit! Reprehenderit doloribus nihil assumenda nisi consequatur reiciendis iusto quidem vitae aut animi nemo, non corrupti dolorem aliquam ut, minima minus sapiente totam ipsum! Voluptates, ut.
+                    Quis tempore quae consectetur voluptatum nostrum modi nesciunt totam repellendus eligendi commodi laudantium officia temporibus laborum excepturi quo fugiat, consequuntur deserunt vero ipsa explicabo, inventore ipsum eaque harum at! Blanditiis!
+                    Nemo minus at inventore repellat ab aperiam saepe rerum nostrum veniam enim ipsa molestiae laborum eaque sunt ex, eveniet recusandae corporis commodi vel consectetur eum neque beatae eos! Tempore, magnam.
+                    Nesciunt, corporis nisi libero obcaecati perspiciatis officia neque reiciendis labore minima ad quibusdam quisquam numquam distinctio, a deserunt recusandae iure possimus dolor. Molestiae dolorum harum enim, explicabo alias sapiente eveniet?
+                    Ipsam culpa doloribus, placeat ullam blanditiis quo accusantium perspiciatis nisi, maxime quidem reprehenderit facere ab tempore est voluptas, earum eius maiores temporibus? Ducimus facere temporibus a vel optio delectus natus.
+                    Laudantium exercitationem, quo aperiam explicabo debitis optio in ut quas, dolorem, recusandae officia ullam? Omnis vero rerum cupiditate accusantium, tempore consequuntur fugit sunt recusandae libero, animi amet, sit ipsam et.
+                </p>
+            </div>
+            <div class="col-6">
+                <form action="{% url 'create_event' %}" method="post" class="form-control">
+                    <h3 class="mb-5">Event Creation Form</h3>
+                    {% csrf_token %}
+                    {%  for i in form %}
+                            <div class="m-3">
+                                <label for="{{i.name}}" class="form-label">{{i.label}}</label>
+                                {{i}}
+                            </div>
+                    {% endfor %}
+                    <input type="submit" class="btn btn-primary m-3" value="Create a New Event">
+                </form>
+            </div>
+        </div>
+{% endblock %}

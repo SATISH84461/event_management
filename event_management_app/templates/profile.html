@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Create Event
+{% endblock %}
+{% block body %}
+  
+    <div class="container">
+        <h3 class="text-center m-5">My Profile</h3>
+        <form action="{% url 'profile' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <div class="col-12 mt-2 mb-2">
+                        <label class="control-label">Username</label>
+                        {{form.username}}
+                    </div>
+                    <div class="col-6 mt-2 mb-2">
+                        <label class="control-label">First Name</label>
+                        {% if form.first_name %}
+                            {{form.first_name}}
+                        {% else %}
+                            <input class="form-control" type="text" name="firstName"
+                                placeholder="Not Provided">
+                        {% endif %}
+                    </div>
+                    <div class="col-6 mt-2 mb-2">
+                        <label class="control-label">Last Name</label>
+                        {% if form.last_name %}
+                            {{form.last_name}}
+                        {% else %}
+                            <input class="form-control" type="text" name="lastName"
+                                placeholder="Not Provided">
+                        {% endif %}
+                    </div>
+                    <div class="col-12 mt-2 mb-2">
+                        <label class="control-label">Email address</label>
+                        {{form.email}}
+                    </div>      
+                    <div class="col-4 mt-3 mb-5">
+                        <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+                </div>
+        </form>
+    </div>
+{% endblock %}

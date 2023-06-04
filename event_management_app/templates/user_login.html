@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sign Up
+{% endblock %}
+ 
+{% block body %}
+
+    <div class="row m-5">
+        <div class="col-6">
+            <form action="" method="post" class="form-control" style="padding: 3em 2em;">    
+                <div class="m-4">
+                    <h2>Sign In</h2>
+                </div>
+                {% csrf_token %}
+                {% for i in form %}
+                    <div class="m-4">
+                        <label for="{{i.name}}">{{i.label}}</label>
+                        {{i}}
+                    </div>
+                {% endfor %}
+                <div class="m-4">
+                    <button class="btn btn-primary" type="submit">Register</button>
+                </div>
+            </form>
+            <p class="text-center m-2">If you didn't have an account, <a href="{% url 'create_user' %}">Register</a>  yourself with us.</p>        
+        </div>
+        <div class="col-6 mt-5 mb-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur possimus mollitia repudiandae exercitationem reiciendis vero eum quis. Doloremque eveniet nam nisi possimus, cupiditate, doloribus numquam non illo, vitae quod saepe.
+            Aut, distinctio voluptas aliquam sunt, quae expedita facilis molestiae ut accusamus nobis amet enim optio recusandae ab laborum officia quos aperiam nam velit saepe nisi deleniti minima itaque. Ullam, dolores.
+            Quia, optio blanditiis vero quidem, ullam dolorum iste et facilis consectetur ipsum iusto voluptatem nam maxime. Recusandae atque illo molestias incidunt quisquam ad molestiae hic ipsa, quasi quo, dolor doloribus!
+            Nihil cumque magni reiciendis repellendus dolorum dolore nemo optio necessitatibus, ex at. Autem nobis, doloribus repudiandae mollitia voluptatibus nam aperiam incidunt non maiores asperiores beatae molestias velit quibusdam sunt rem.
+        </div>
+
+    </div>
+
+{% endblock %}
+
