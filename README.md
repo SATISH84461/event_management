@@ -33,6 +33,22 @@ The project is built using the following technologies:
 - HTML/CSS: for frontend design and styling
 - JavaScript: for frontend interactivity (if applicable)
 
+## Installation
+
+Install my-project with npm
+
+```shell
+  git clone https://github.com/SATISH84461/event_management.git
+  cd event_management
+  python3 -m venv venv
+  source venv/bin/activate
+  pip install -r requirements.txt
+  python manage.py migrate
+  python manage.py createsuperuser
+  python manage.py runserver
+```
+    
+
 ## Usage
 
 1. Register a new user account or log in with an existing one.
