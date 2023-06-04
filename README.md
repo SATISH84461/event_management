@@ -5,7 +5,6 @@ Event Management is a web application built with Django that helps users organiz
 ## Table of Contents
 
 - [Features](#features)
-- [Demo](#demo)
 - [Technologies](#technologies)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -14,15 +13,9 @@ Event Management is a web application built with Django that helps users organiz
 ## Features
 
 - User registration and authentication
-- Event creation and management
-- RSVP functionality for attendees
-- Event search and filtering
-- Event reminders and notifications
+- Event creation
+- User can Register for upcoming events
 - User profile management
-
-## Demo
-
-You can find a live demo of the application at [Demo Link](https://your-demo-link.com).
 
 ## Technologies
 
@@ -80,15 +73,13 @@ The project is built using the following technologies:
 
 1. Register a new user account or log in with an existing one.
 
-2. Create an event by providing the necessary details such as event name, date, time, location, etc.
+2. Create an event by providing the necessary details such as event name, date, etc.
 
-3. Browse existing events, search for specific events, and filter them based on criteria like date or location.
+3. See the upcoming and past events.
 
-4. RSVP to events you wish to attend.
+4. Register for upcoming Event.
 
-5. Receive notifications and reminders for upcoming events.
-
-6. Update your user profile with any changes or preferences.
+5. Update your user profile with any changes or preferences.
 
 ## Contributing
 
