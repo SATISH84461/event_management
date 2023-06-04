@@ -1,7 +1,5 @@
 # Event Management
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-
 Event Management is a web application built with Django that helps users organize and manage various types of events.
 
 ## Table of Contents
@@ -62,7 +60,3 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 4. Push your branch to your forked repository.
 
 5. Submit a pull request describing your changes.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
