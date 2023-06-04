@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block body %}
+    <div class="m-5">
+        <h1 class="mt-5 mb-5">Upcoming Events</h1>
+        <div class="row">
+            {% for i in data %}
+                <div class="col-3 mt-3 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                        <h3 class="card-title">{{i.name}}</h3>
+                        <p class="fw-bold">Date : {{i.date}}</p>
+                        <p class="fw-bold">Time : {{i.start_time}} - {{i.end_time}}</p>
+                        <a href="{% url 'event_detail' id=i.id %}" class="btn btn-primary">Get More Details</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <h1 class="mt-5 mb-5">Past Events</h1>
+        <div class="row">
+            {% for i in past_data %}
+                <div class="col-3 mt-3 mb-3" style="text-decoration: none; color: inherit;">
+                    <div class="card">
+                        <div class="card-body">
+                        <h3 class="card-title">{{i.name}}</h3>
+                        <p class="fw-bold">Date : {{i.date}}</p>
+                        <p class="fw-bold">Time : {{i.start_time}} - {{i.end_time}}</p>
+                        <a  href="{% url 'event_detail' id=i.id %}" class="btn btn-primary">Get More Details</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+{% endblock %}
+

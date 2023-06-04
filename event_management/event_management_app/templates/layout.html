@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} - Event Management</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'Homepage' %}">Event Management</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'Homepage' %}">Home</a>
+              </li>
+              {% if not user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'login_user' %}">Signin</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'create_user' %}">Signup</a>
+                </li>
+              {% else %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'create_event' %}">Create New Event</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'logout' %}">Signout</a>
+                </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    {% if errors %}
+      {% for i in errors %}
+          <div class="mt-3 ms-5 me-5 alert alert-danger alert-dismissible fade show" role="alert">
+              {{i}}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+      {% endfor %}
+    {% endif %}
+    {% if message %}
+      {% for i in message %}
+          <div class="mt-3 ms-5 me-5 alert alert-primary alert-dismissible fade show" role="alert">
+              {{i}}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+      {% endfor %}
+    {% endif %}
+    {% block body %}
+    {% endblock %}
+    <div class="text-center p-3" style="background-color: black; color:white">
+        Created By Satish Chauhan
+    </div>
+</body>
+</html>
