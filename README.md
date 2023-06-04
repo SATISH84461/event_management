@@ -36,36 +36,40 @@ The project is built using the following technologies:
 
 ## Installation
 
-1. Install my-project with npm
+- Install my-project with npm
 ```shell
   git clone https://github.com/SATISH84461/event_management.git
 ```
 
-2. Navigate to the project directory
+- Navigate to the project directory
 ```shell
   cd event_management
 ```
-3. Create a virtual environment
+- Create a virtual environment
 ```shell
   python -m venv venv
 ```
 4. Activate the virtual environment
 ```shell
-  venv/bin/activate
+  .\venv\Scripts\activate
 ```
 5. Install the dependencies
 ```shell  
   pip install -r requirements.txt
 ```
-6. Apply the database migrations
+6. Run command to create new tables.
+```shell
+  python manage.py makemigrations
+```
+8. Apply the database migrations
 ```shell
   python manage.py migrate
 ```
-7. Create a superuser account
+8. Create a superuser account
 ```shell
   python manage.py createsuperuser
 ```
-8. Start the development serve
+9. Start the development serve
 ```shell
   python manage.py runserver  
 ```
